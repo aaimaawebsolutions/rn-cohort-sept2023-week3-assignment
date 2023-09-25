@@ -32,10 +32,6 @@ const slides = [
 export default function App() {
   const [showHomePage, setShowHomePage] = useState(false);
 
-  // StatusBar.barStyle("light-content", true);
-  // StatusBar.setBackgroundColor(COLORS.primary);
-  <StatusBar style="light" />;
-
   const buttonLabel = (label) => {
     return (
       <View

@@ -12,8 +12,9 @@ import React from "react";
 import styles from "./styles";
 import { COLORS } from "../../constants/theme";
 import { StatusBar } from "expo-status-bar";
+import { Home } from "../../navigator/AppNavigator";
 
-const signInScreen = ({ navigation }) => {
+const signInScreen = ({ navigation, setIsShowHome }) => {
   <StatusBar style="light" />;
   return (
     <View style={styles.container}>

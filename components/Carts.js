@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
+import { removeItemFromCart } from "./action/Action";
 
 const Cart = () => {
   const navigation = useNavigation();
@@ -56,11 +57,11 @@ const Cart = () => {
                   alignSelf: "center",
                   marginTop: 10,
                   borderWidth: 0.2,
-                  borderColor: "#8e8e8e",
+                  borderColor: "#64748b",
                   flexDirection: "row",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  backgroundColor: "#fff",
+                  backgroundColor: "#f1f5f9",
                 }}
               >
                 <View style={{ width: "60%", padding: 20 }}>
@@ -75,7 +76,7 @@ const Cart = () => {
                       width: 100,
                       justifyContent: "center",
                       alignItems: "center",
-                      backgroundColor: "red",
+                      backgroundColor: "#ef4444",
                       marginTop: 5,
                     }}
                     onPress={() => {
@@ -91,7 +92,7 @@ const Cart = () => {
                     width: 100,
                     height: 90,
                     borderRadius: 10,
-                    marginRight: 15,
+                    marginRight: 5,
                   }}
                 />
               </View>

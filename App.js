@@ -5,25 +5,45 @@ import { mystore } from "./components/store/Store";
 import { createStackNavigator } from "@react-navigation/stack";
 import Products from "./components/Product";
 import Cart from "./components/Carts";
+import HomeScreen from "./screens/HomeScreen";
+import MovieScreen from "./screens/MovieScreen";
+import PersonScreen from "./screens/PersonScreen";
+import SearchScreen from "./screens/SearchScreen";
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Products">
-      <Stack.Screen name="Products" component={Products} />
-      <Stack.Screen name="Cart" component={Cart} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        options={{ headerShown: false }}
+        component={HomeScreen}
+      />
+      <Stack.Screen
+        name="Movie"
+        options={{ headerShown: false }}
+        component={MovieScreen}
+      />
+      <Stack.Screen
+        name="Person"
+        options={{ headerShown: false }}
+        component={PersonScreen}
+      />
+      <Stack.Screen
+        name="Search"
+        options={{ headerShown: false }}
+        component={SearchScreen}
+      />
     </Stack.Navigator>
   );
 };
 
 const App = () => {
   return (
-    <Provider store={mystore}>
-      <NavigationContainer>
-        <AppNavigator />
-      </NavigationContainer>
-    </Provider>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
 };
 
